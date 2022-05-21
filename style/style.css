@@ -1,0 +1,112 @@
+@charset "UTF-8";
+
+:root{
+    /*Criação de variáveis para as cores usadas no site.*/
+    --vermeho:#E50914;
+    --preta:#141414;
+    --cinza:#AAA;
+    --branco:#FFF;
+}
+
+*{
+    /*Resetando as configs iniciais do CSS.*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+                                        /*Elementos base*/
+
+body{
+    background-color:var(--preta);
+    font-family: Arial, Times, serif; 
+    color: var(--branco);  
+}
+
+header .container{
+    /*Iniciando flexbox com display flex. Flex-direction:row não é obrigatório, pois o display flex já o deixa em row. Align-itens:center centraliza as informções. Justify-content:space-between deixa os itens em lados opostos.*/
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .logo{
+    color: var(--vermeho);
+    font-family: 'Arial black', Times;
+    font-size: 40px;
+    margin-left: 5px;
+}
+
+header nav a{
+    text-decoration: none;
+    color:var(--cinza);
+    margin-right: 10px;
+}
+
+header nav a:hover{
+    color: var(--branco);
+}
+
+                                        /*Filme principal*/
+
+.filme-principal{
+    font-size: 16px;
+    background:linear-gradient(rgba(0,0,0,0.50),rgba(0,0,0,0.50)),url("../img/capa-house.jpg"); /*background:url("imagem") coloca imagem no fundo. ATALHO:digitar  ../  abre o local das pastas.*/
+    height: 700px; /*Precisou usar height para crescer a imagem na caixa*/
+    background-size: cover; /*O background-size:cover foi usado para preencher a imagem na caixa perfeitamente.*/
+    display: flex;
+    flex-direction: column; /* column deixa em coluna horizontalmente.*/
+    justify-content: center; /* deixou a coluna do column centralizada.*/
+    align-items: flex-start; /* Para que os itens comecem da esquerda.*/
+}
+
+.filme-principal .descricao{
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+.filme-principal .titulo{
+    margin-top: 15%;
+    font-size: 40px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.botao{
+    background-color: rgba(0, 0, 0, 0.50);
+    border: none;
+    color: var(--branco);
+    padding: 15px 30px;
+    margin-right: 15px;
+    font-size: 12px;
+    cursor: pointer; /* O cursor muda para uma mãozinha ao passar pelo botão. Pode ser colocado no hover também.*/
+    transition: .3s ease all; /*Suaviza a mudança de efeito. Pode ser colocado no hover também.*/
+}
+
+.botao:hover{
+    border: 1px solid var(--branco); /* Criei a borda branca.*/
+    background-color: var(--branco);
+    color: black; 
+}
+
+.botao i{
+    margin-right: 8px;
+}
+
+.container{
+    margin-left: 15px;
+}
+
+.filme-principal .container{
+    width: 70%;
+}
+
+.box-filme{
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+.descricao{
+    width: 75%;
+}
